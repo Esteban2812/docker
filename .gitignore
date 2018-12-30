@@ -1,0 +1,3 @@
+# ignore compressed files
+*.tgz
+*.gz

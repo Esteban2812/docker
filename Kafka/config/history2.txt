@@ -1,0 +1,33 @@
+    1  cd kafka_2.12-2.1.0
+    2  ls
+    3  vim config/zookeeper.properties 
+    4  vim config/zookeeper2.properties 
+    5  ./bin/zookeeper-server-start.sh -daemon ./config/zookeeper2.properties 
+    6  telnet localhost 2181
+    7  vim config/server2.properties 
+    8  nohup ./bin/kafka-server-start.sh ./config/server2.properties &
+    9  tail -f nohup.out 
+   10  telnet localhost 9092
+   11  vim config/server2.properties 
+   12  tail -f nohup.out 
+   13  telnet localhost 9092
+   14  tail -f nohup.out 
+   15  ls /data/kafka/kafka-logs/
+   16  tail -f nohup.out 
+   17  vim config/server2.properties 
+   18  ./bin/kafka-server-stop.sh 
+   19* 
+   20  ./bin/kafka-server-stop.sh 
+   21  telnet localhost 9092
+   22  telnet localhost 2181
+   23  telnet localhost 9092
+   24  nohup ./bin/kafka-server-start.sh ./config/server2.properties &
+   25  tail -f nohup.out 
+   26  ./bin/kafka-console-consumer.sh
+   27  ./bin/kafka-console-consumer.sh --bootstrap-server 172.17.0.3:2181 --topic yyy --from-beginning
+   28  ./bin/kafka-console-consumer.sh --bootstrap-server 172.17.0.3:9092 --topic yyy --from-beginning
+   29  clear
+   30  more config/server2.properties 
+   31  cd config
+   32  ls
+   33  history > history.txt
