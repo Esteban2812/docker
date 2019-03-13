@@ -11,4 +11,8 @@ sudo yum install -y libXi-devel
 sudo yum install -y libXrandr-devel
 sudo yum install -y libXrender-devel
 sudo yum install -y xorg-x11-xauth
+sudo yum install -y gtk2
+sudo yum install -y pango
+sudo yum install -y gtk2-devel
+sudo yum install -y dejavu-sans-fonts # or the font of your choice
 

@@ -1,3 +1,6 @@
 [submodule "jenkins/jenkins"]
 	path = jenkins/jenkins
 	url = git@github.com:jenkinsci/jenkins.git
+[submodule "jenkins/docker"]
+	path = jenkins/docker
+	url = git@github.com:jenkinsci/docker.git
